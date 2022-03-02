@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    扩展方式注入 p命名空间和c命名空间需要导入约束-->
+<!--    p 命名空间注入 可以直接注入属性的值：property-->
+    <bean id="user" class="com.shf.pojo.User" p:name="shf" p:age="18"/>
+
+<!--    c 命名空间注入，通过构造器注入: construct-args-->
+    <bean id="user2" class="com.shf.pojo.User" c:age="19" c:name="fan" scope="prototype"/>
+<!--
+    scope : bean的作用域
+    singleton： 单例模式
+    prototype： 原型模式，每次从容器中get的时候，都会产生一个新对象
+-->
+</beans>

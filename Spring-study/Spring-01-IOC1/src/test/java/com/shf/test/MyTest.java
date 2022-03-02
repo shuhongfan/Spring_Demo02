@@ -4,6 +4,7 @@ import com.shf.dao.UserDaoMysqlImpl;
 import com.shf.dao.UserDaoSqlserverImpl;
 import com.shf.service.UserServiceImpl;
 import org.junit.Test;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MyTest {
     @Test
@@ -18,4 +19,16 @@ public class MyTest {
 
         userService.getUser();
     }
+
+    @Test
+    public void test2(){
+//        获取ApplicationContext,拿到spring的容器
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+//        容器在手，天下我有，需要什么，就直接get什么
+        UserServiceImpl userServiceImpl = (UserServiceImpl) context.getBean("userServiceImpl");
+
+        userServiceImpl.getUser();
+    }
+
 }

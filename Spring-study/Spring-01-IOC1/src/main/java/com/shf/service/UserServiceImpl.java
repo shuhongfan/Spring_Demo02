@@ -1,13 +1,11 @@
 package com.shf.service;
 
 import com.shf.dao.UserDao;
-import com.shf.dao.UserDaoImpl;
-import com.shf.dao.UserDaoMysqlImpl;
-import com.shf.dao.UserDaoOracle;
+import com.shf.dao.UserDaoOracleImpl;
 
 public class UserServiceImpl implements UserService{
 
-    private UserDao userDao = new UserDaoOracle();
+    private UserDao userDao = new UserDaoOracleImpl();
 
 //    利用set进行动态实现值的注入
 //    之前，程序是主动创建的对象，控制权在程序员手上

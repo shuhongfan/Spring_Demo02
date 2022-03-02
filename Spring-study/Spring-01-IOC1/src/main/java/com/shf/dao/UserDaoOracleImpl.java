@@ -1,6 +1,6 @@
 package com.shf.dao;
 
-public class UserDaoOracle implements UserDao{
+public class UserDaoOracleImpl implements UserDao{
 
     @Override
     public void getUser() {
