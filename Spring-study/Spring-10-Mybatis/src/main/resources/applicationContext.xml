@@ -1,29 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/context
-        https://www.springframework.org/schema/context/spring-context.xsd">
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <import resource="spring-dao.xml"/>
 
-    <bean id="userMapper" class="com.shf.mapper.UserMapperImpl">
-        <property name="sqlSession" ref="sqlSession"/>
-    </bean>
 
-    <bean id="userMapper2" class="com.shf.mapper.UserMapperImpl2">
+    <!--<bean id="userMapper" class="nuc.ss.mapper.UserMapperImpl">-->
+    <!--    <property name="sqlSession" ref="sqlSession"/>-->
+    <!--</bean>-->
+
+    <bean id="userMapper2" class="nuc.ss.mapper.UserMapperImpl2">
         <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
     </bean>
-
-<!--
-    1. 编写数据源配置
-    2. sqlSessionFactory
-    3. sqlSessionTemplate
-    4. 需要给接口加实现类
-    5. 将自己写的实现类,注入到spring中
-    6. 测试使用
-
--->
 </beans>
