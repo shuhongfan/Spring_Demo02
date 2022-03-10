@@ -1,0 +1,11 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(‰®Ş«ÿÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Õ‚Øıÿÿÿÿ
+P
+java:S1854";Remove this useless assignment to local variable "proceed".(ÀÎö7
+S	java:S106"9Replace this use of System.out or System.err by a logger.(†ŸÛ©øÿÿÿÿ
+A
+java:S1481",Remove this unused "proceed" local variable.(ÀÎö7
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Áç°ß
+R
+java:S1128"7Remove this unused import 'org.aspectj.lang.Signature'.(‘‡æ‰øÿÿÿÿ
